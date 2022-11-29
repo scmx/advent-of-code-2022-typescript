@@ -8,7 +8,7 @@ export async function readInputOutput(yearDay: YearDay) {
     const filepath = path.join(__dirname, `../${yearDay}/${name}`);
     if (!fs.stat(filepath)) return "";
     const content = await fs.readFile(filepath, "utf-8");
-    return content.trim()
+    return content.trim();
   }
 
   return await Promise.all([
